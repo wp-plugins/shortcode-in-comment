@@ -12,6 +12,8 @@ Enables blog owners to allow some shortcodes to be used in comments. You can cho
 == Description ==
 This plugin enables blog owners to allow some shortcodes to be used in comments. You can choose what to allow (i.e. Whitelist some shortcodes). It only affects shortcodes in comments, but not in pages, posts, etc. All shortcodes are default to be disabled.
 
+[Plugin Homepage](http://www.kelvinblog.tk/my-wordpress-plugins/shortcode-in-comment-page)
+
 = Settings =
 1. Visit 'Settings > Shortcode in Comment' to set what shortcodes are enabled in comments.
 2. Type your shortcode(s) to be enabled in the text box (comma seperated for more than one)
