@@ -19,7 +19,7 @@ class shortcode_in_comment_options_page
 
 	function admin_menu()
 	{
-		add_options_page('Enabled Shortcode in Comment', 'Shortcode in Comment', 'manage_options', 'shortcode_in_comment', array($this, 'settings_page'));
+		add_options_page(__('Enabled Shortcode in Comment'), __('Shortcode in Comment'), 'manage_options', 'shortcode_in_comment', array($this, 'settings_page'));
 	}
 
 	function settings_page()
@@ -31,14 +31,14 @@ class shortcode_in_comment_options_page
 		}
 ?>
 <div class="wrap">
-<h2>Enabled Shortcode in Comment<h2>
+<h2><?php echo _e('Enabled Shortcode in Comment') ?><h2>
 
 <form method="post" action=""> <!-- <form method="post"> can be used in HTML5, which is the standard --!>
 	<?php settings_fields('shortcode-in-comment-settings-group'); ?>
 	<?php do_settings_sections('shortcode-in-comment-settings-group'); ?>
 	<table class="form-table">
 		<tr valign="top">
-			<th scope="row">Enabled shortcode (comma seperated)</th>
+			<th scope="row"><?php _e('Enabled shortcode (comma seperated)') ?></th>
 			<td><input type="text" name="comment_enabled_shortcode" value="<?php echo get_option('comment_enabled_shortcode'); ?>" /></td>
 		</tr>
 	</table>
@@ -54,6 +54,8 @@ class shortcode_in_comment
 {
 	function __construct()
 	{
+		load_plugin_textdomain('shortcode-in-comment', false, $plugin_dir);
+
 		add_filter('comments_template', array($this, 'init_enabled_shortcodes'));
 	}
 
