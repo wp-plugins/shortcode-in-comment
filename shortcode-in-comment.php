@@ -3,7 +3,7 @@
  * Plugin Name: Shortcode in Comment
  * Plugin URI: http://www.kelvinblog.tk/shortcode-in-comment
  * Description: Allow users to use some shortcodes in comments
- * Version: 1.0.0
+ * Version: 1.1.0
  * (function.bugfix.wordpress_update)
  * Author: Kelvin Ng
  * Author URI: http://www.kelvinblog.tk
@@ -19,7 +19,7 @@ class shortcode_in_comment_options_page
 
 	function admin_menu()
 	{
-		add_options_page(__('Enabled Shortcode in Comment'), __('Shortcode in Comment'), 'manage_options', 'shortcode_in_comment', array($this, 'settings_page'));
+		add_options_page(__('Enabled Shortcode in Comment', 'shortcode-in-comment'), __('Shortcode in Comment', 'shortcode-in-comment'), 'manage_options', 'shortcode_in_comment', array($this, 'settings_page'));
 	}
 
 	function settings_page()
@@ -31,14 +31,14 @@ class shortcode_in_comment_options_page
 		}
 ?>
 <div class="wrap">
-<h2><?php echo _e('Enabled Shortcode in Comment') ?><h2>
+<h2><?php echo _e('Enabled Shortcode in Comment', 'shortcode-in-comment') ?><h2>
 
 <form method="post" action=""> <!-- <form method="post"> can be used in HTML5, which is the standard --!>
 	<?php settings_fields('shortcode-in-comment-settings-group'); ?>
 	<?php do_settings_sections('shortcode-in-comment-settings-group'); ?>
 	<table class="form-table">
 		<tr valign="top">
-			<th scope="row"><?php _e('Enabled shortcode (comma seperated)') ?></th>
+			<th scope="row"><?php _e('Enabled shortcode (comma seperated)', 'shortcode-in-comment') ?></th>
 			<td><input type="text" name="comment_enabled_shortcode" value="<?php echo get_option('comment_enabled_shortcode'); ?>" /></td>
 		</tr>
 	</table>
@@ -54,7 +54,7 @@ class shortcode_in_comment
 {
 	function __construct()
 	{
-		load_plugin_textdomain('shortcode-in-comment', false, $plugin_dir);
+		load_plugin_textdomain('shortcode-in-comment', false, basename(dirname(__FILE__)) . '/languages/');
 
 		add_filter('comments_template', array($this, 'init_enabled_shortcodes'));
 	}
