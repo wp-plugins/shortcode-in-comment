@@ -3,7 +3,7 @@ Contributors: Kelvin Ng
 Tags: shortcode,comments
 Requires at least: 3.1.0
 Tested up to: 4.1
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -47,9 +47,15 @@ No. It only affects shortcodes in comments.
 = 1.1.0 =
 * Add i18n (gettext) support. Currently only zh_TW is included.
 
+= 1.1.1 =
+* Add Serbian (sr_RS) language support. Translated by Ogi Djuraskovic <ognjend@firstsiteguide.com> of [FirstSiteGuide](http://firstsiteguide.com).
+
 == Upgrade Notice ==
 = 1.0.0 =
 * Initial release.
 
 = 1.1.0 =
 * Add i18n (gettext) support. Currently only zh_TW is included.
+
+= 1.1.1 =
+* Add Serbian (sr_RS) language support. Translated by Ogi Djuraskovic <ognjend@firstsiteguide.com> of [FirstSiteGuide](http://firstsiteguide.com).

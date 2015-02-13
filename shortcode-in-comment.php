@@ -3,7 +3,7 @@
  * Plugin Name: Shortcode in Comment
  * Plugin URI: http://www.kelvinblog.tk/shortcode-in-comment
  * Description: Allow users to use some shortcodes in comments
- * Version: 1.1.0
+ * Version: 1.1.1
  * (function.bugfix.wordpress_update)
  * Author: Kelvin Ng
  * Author URI: http://www.kelvinblog.tk
